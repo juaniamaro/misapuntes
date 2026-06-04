@@ -30,6 +30,7 @@
     </main>
 <script>
 const texto = "REPO";
+
 let i = 0;
 let borrando = false;
 
@@ -37,18 +38,18 @@ function efectoTypewriter() {
     const titulo = document.getElementById("title");
 
     if (!borrando) {
-        // ESCRIBIENDO
+        // ESCRIBIR
         titulo.textContent = texto.substring(0, i);
         i++;
 
         if (i > texto.length) {
             borrando = true;
-            setTimeout(efectoTypewriter, 1200); // pausa antes de borrar
+            setTimeout(efectoTypewriter, 1200); // pausa cuando termina de escribir
             return;
         }
 
     } else {
-        // BORRANDO
+        // BORRAR
         titulo.textContent = texto.substring(0, i);
         i--;
 
@@ -58,7 +59,7 @@ function efectoTypewriter() {
         }
     }
 
-    setTimeout(efectoTypewriter, borrado ? 60 : 120);
+    setTimeout(efectoTypewriter, borrando ? 60 : 120);
 }
 
 efectoTypewriter();
