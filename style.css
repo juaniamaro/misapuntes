@@ -306,21 +306,29 @@ main {
     margin-top: 40px;
 }
 
-/* CAJA BUSCADOR */
-.search-box {
+/* CONTENEDOR */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* BARRA COMBINADA */
+.filter-box {
     display: flex;
     align-items: center;
     gap: 10px;
-    border-bottom: 2px solid #72f2c0; /* menta */
-    padding: 8px 10px;
-    width: 320px;
+
+    width: 500px;
+    padding: 8px 12px;
+
+    border-bottom: 2px solid #72f2c0;
     transition: 0.3s;
 }
 
 /* ICONO */
-.search-box .icon {
+.filter-box .icon {
     color: #72f2c0;
-    font-size: 1.2rem;
 }
 
 /* INPUT */
@@ -330,19 +338,28 @@ main {
     border: none;
     outline: none;
     color: white;
-    font-size: 1rem;
 }
 
-/* PLACEHOLDER */
-#buscador::placeholder {
-    color: #555;
+/* SELECT */
+#categoria {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
 }
 
-/* EFECTO AL ESCRIBIR / FOCUS */
-.search-box:focus-within {
-    border-bottom: 2px solid #ff4fa3; /* rosa */
+/* OPCIONES */
+#categoria option {
+    background: #111;
+    color: white;
 }
 
-.search-box:focus-within .icon {
+/* FOCUS EFFECT */
+.filter-box:focus-within {
+    border-bottom: 2px solid #ff4fa3;
+}
+
+.filter-box:focus-within .icon {
     color: #ff4fa3;
 }
