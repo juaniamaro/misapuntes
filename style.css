@@ -260,11 +260,10 @@ main {
 
 .lenguajes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 25px;
-    padding: 60px;
-    max-width: 1000px;
-    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr); /* 🔥 3 columnas fijas */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto; /* centra el bloque */
 }
 
 /* tarjeta */
