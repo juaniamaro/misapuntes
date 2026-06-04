@@ -9,7 +9,7 @@
 <body>
 
     <header>
-        <h1 id="title">Repo de Apuntes</h1>
+        <h1 id="title"></h1>
     </header>
 
     <nav>
@@ -28,6 +28,20 @@
             </p>
         </div>
     </main>
+<script>
 
+const texto = "REPO";
+let i = 0;
+
+function escribir() {
+    if (i < texto.length) {
+        document.getElementById("title").textContent += texto.charAt(i);
+        i++;
+        setTimeout(escribir, 120); // velocidad de escritura
+    }
+}
+
+escribir();
+</script>
 </body>
 </html>
