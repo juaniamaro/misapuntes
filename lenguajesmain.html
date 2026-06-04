@@ -43,7 +43,7 @@
     <!-- 💻 DESARROLLO WEB -->
     <section class="categoria" data-cat="web">
 
-        <h2>💻 Desarrollo Web</h2>
+        <h2 class="cat-title">💻 Desarrollo Web</h2>
 
         <div class="grid">
 
@@ -138,25 +138,54 @@ efectoTerminal();
 <script>
 const buscador = document.getElementById("buscador");
 const categoria = document.getElementById("categoria");
-const cards = document.querySelectorAll(".lang-card");
+
+const categorias = document.querySelectorAll(".categoria");
 
 function filtrar() {
 
     const texto = buscador.value.toLowerCase();
     const cat = categoria.value;
 
-    cards.forEach(card => {
+    categorias.forEach(section => {
 
-        const nombre = card.querySelector("h3").textContent.toLowerCase();
-        const grupo = card.closest(".categoria").dataset.cat;
+        const sectionCat = section.dataset.cat;
+        const titulo = section.querySelector(".cat-title");
+        const cards = section.querySelectorAll(".lang-card");
 
-        const matchTexto = nombre.includes(texto);
-        const matchCat = (cat === "all" || grupo === cat);
+        let algunaVisible = false;
 
-        if (matchTexto && matchCat) {
-            card.style.display = "flex";
-        } else {
-            card.style.display = "none";
+        cards.forEach(card => {
+
+            const nombre = card.querySelector("h3").textContent.toLowerCase();
+
+            const matchTexto = nombre.includes(texto);
+            const matchCat = (cat === "all" || cat === sectionCat);
+
+            if (matchTexto && matchCat) {
+                card.style.display = "flex";
+                algunaVisible = true;
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+        // 🧠 CONTROL DE VISIBILIDAD DEL TÍTULO
+        const filtroActivo = (cat !== "all" || texto.trim() !== "");
+
+        if (!filtroActivo) {
+            // SIN FILTRO → todo visible
+            section.style.display = "block";
+            titulo.style.display = "block";
+        } 
+        else if (algunaVisible) {
+            // HAY RESULTADOS → mostrar título
+            section.style.display = "block";
+            titulo.style.display = "block";
+        } 
+        else {
+            // NO HAY RESULTADOS → ocultar sección completa
+            section.style.display = "none";
         }
 
     });
