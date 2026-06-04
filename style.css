@@ -377,13 +377,21 @@ main {
     color: #ff4fa3;
 }
 .categoria {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔥 centra todo */
 }
 
-.categoria h2 {
-    display: inline-block;   /* 🔥 clave */
+.cat-title {
+    display: inline-flex;   /* 🔥 clave */
+    justify-content: center;
+    align-items: center;
+
     color: #72f2c0;
-    margin: 40px auto 20px;
-    padding: 10px 20px;
+    margin: 40px 0 20px;
+    padding: 8px 18px;
+
     border-bottom: 2px solid #ff4fa3;
+
+    width: fit-content; /* 🔥 evita expansión */
 }
