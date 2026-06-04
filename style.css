@@ -254,3 +254,46 @@ main {
     border-color: #ff4fa3;
     transform: translateX(5px);
 }
+/* ========================= */
+/* 🧠 LENGUAJES GRID */
+/* ========================= */
+
+.lenguajes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    padding: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* tarjeta */
+.lang-card {
+    background-color: #111;
+    border: 2px solid #72f2c0;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* icono */
+.lang-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* texto */
+.lang-card h3 {
+    color: #ff4fa3;
+    font-size: 1.1rem;
+}
+
+/* hover */
+.lang-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff4fa3;
+    box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
+}
