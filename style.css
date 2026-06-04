@@ -24,7 +24,7 @@ body {
 }
 
 #titulo {
-    color: #72f2c0;
+    color: #ff4fa3;
     font-size: 1.8rem;
 }
 
@@ -33,7 +33,7 @@ body {
     content: "|";
     animation: blink 0.7s infinite;
     margin-left: 5px;
-    color: #72f2c0;
+    color: #ff4fa3;
 }
 
 @keyframes blink {
