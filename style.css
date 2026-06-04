@@ -1,41 +1,41 @@
-/* Reset básico */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* Estilos generales */
-body {
-    background-color: #000;
-    color: #00ff88;
     font-family: "Courier New", monospace;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
+/* FONDO GENERAL */
+body {
+    background-color: #0d0d0d;
+    color: white;
+    min-height: 100vh;
+}
 
-/* Cabecera */
-header {
-    background: linear-gradient(90deg, #ff4fa3, #72f2c0);
+/* ========================= */
+/* 🔥 HEADER TIPO TERMINAL   */
+/* ========================= */
+
+.terminal-header {
+    background-color: #000;
     padding: 30px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid #00ff88;
 }
 
-/* Texto grande estilo consola */
-h1 {
-    font-size: 2rem;
-    text-shadow: 0 0 8px #00ff88;
+#titulo {
+    color: #00ff88;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px #00ff88;
 }
 
-/* Cursor parpadeante */
-h1::after {
+/* cursor */
+#titulo::after {
     content: "_";
     animation: blink 0.7s infinite;
     margin-left: 5px;
+    color: #00ff88;
 }
 
 @keyframes blink {
@@ -43,7 +43,11 @@ h1::after {
         opacity: 0;
     }
 }
-/* Menú */
+
+/* ========================= */
+/* 🎨 MENÚ                  */
+/* ========================= */
+
 nav {
     display: flex;
     justify-content: center;
@@ -58,22 +62,24 @@ nav a {
     background-color: #1a1a1a;
     padding: 15px 25px;
     border-radius: 12px;
-    border: 2px solid #72f2c0;
+    border: 2px solid #72f2c0; /* verde menta */
+    transition: 0.3s;
     font-weight: bold;
-    transition: all 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #ff4fa3;
+    background-color: #ff4fa3; /* rosa */
     border-color: #ff4fa3;
     transform: translateY(-3px);
 }
 
-/* Contenido principal */
+/* ========================= */
+/* 📦 CONTENIDO PRINCIPAL   */
+/* ========================= */
+
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 50px;
 }
 
@@ -83,7 +89,6 @@ main {
     border-radius: 20px;
     padding: 40px;
     max-width: 800px;
-    width: 100%;
     text-align: center;
 }
 
@@ -93,6 +98,6 @@ main {
 }
 
 .card p {
-    color: #dddddd;
+    color: #ddd;
     line-height: 1.6;
 }
