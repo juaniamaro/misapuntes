@@ -41,37 +41,85 @@
 
 </div>
 <!-- 🧠 CONTENIDO PRINCIPAL -->
-<main class="lenguajes-grid">
+<main class="contenedor-lenguajes">
 
-    <a href="#" class="lang-card">
-        <div class="icon">🐍</div>
-        <h3>Python</h3>
-    </a>
+    <!-- 🔍 FILTRO (lo mantienes igual) -->
+    <div class="filter-wrapper">
 
-    <a href="#" class="lang-card">
-        <div class="icon">🌐</div>
-        <h3>JavaScript</h3>
-    </a>
+        <div class="filter-box">
 
-    <a href="#" class="lang-card">
-        <div class="icon">☕</div>
-        <h3>Java</h3>
-    </a>
+            <span class="icon">🔍</span>
+            <input type="text" id="buscador" placeholder="Buscar lenguaje...">
 
-    <a href="#" class="lang-card">
-        <div class="icon">⚙️</div>
-        <h3>C / C++</h3>
-    </a>
+            <select id="categoria">
+                <option value="all">Todas las categorías</option>
+                <option value="web">Desarrollo Web</option>
+                <option value="backend">Backend</option>
+            </select>
 
-    <a href="#" class="lang-card">
-        <div class="icon">🧠</div>
-        <h3>Go</h3>
-    </a>
+        </div>
 
-    <a href="#" class="lang-card">
-        <div class="icon">💠</div>
-        <h3>C#</h3>
-    </a>
+    </div>
+
+    <!-- 💻 DESARROLLO WEB -->
+    <section class="categoria" data-cat="web">
+
+        <h2>💻 Desarrollo Web</h2>
+
+        <div class="grid">
+
+            <div class="lang-card">
+                <div class="icon">🌐</div>
+                <h3>HTML</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🟦</div>
+                <h3>TypeScript</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ⚙️ BACKEND -->
+    <section class="categoria" data-cat="backend">
+
+        <h2>⚙️ Backend</h2>
+
+        <div class="grid">
+
+            <div class="lang-card">
+                <div class="icon">🐘</div>
+                <h3>PHP</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🐍</div>
+                <h3>Python</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🟢</div>
+                <h3>Node.js</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">💎</div>
+                <h3>Ruby</h3>
+            </div>
+
+        </div>
+    </section>
 
 </main>
     <script>
