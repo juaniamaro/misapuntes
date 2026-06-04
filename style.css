@@ -372,11 +372,13 @@ main {
 .filter-box:focus-within .icon {
     color: #ff4fa3;
 }
+.categoria {
+    text-align: center;
+}
 
 .categoria h2 {
-    text-align: center;
     color: #72f2c0;
-    margin: 40px auto 20px;
+    margin: 40px 0 20px;
     padding: 10px 20px;
     border-bottom: 2px solid #ff4fa3;
     display: inline-block;
