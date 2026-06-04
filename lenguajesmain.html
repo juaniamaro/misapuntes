@@ -74,24 +74,6 @@
     </a>
 
 </main>
-<script>
-const buscador = document.getElementById("buscador");
-const cards = document.querySelectorAll(".lang-card");
-
-buscador.addEventListener("input", function () {
-    const valor = this.value.toLowerCase();
-
-    cards.forEach(card => {
-        const texto = card.querySelector("h3").textContent.toLowerCase();
-
-        if (texto.includes(valor)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-    });
-});
-</script>
     <script>
 const texto = "Lenguajes de Programación";
 
@@ -126,5 +108,36 @@ function efectoTerminal() {
 
 efectoTerminal();
 </script>
+<script>
+const buscador = document.getElementById("buscador");
+const categoria = document.getElementById("categoria");
+const cards = document.querySelectorAll(".lang-card");
+
+function filtrar() {
+
+    const texto = buscador.value.toLowerCase();
+    const cat = categoria.value;
+
+    cards.forEach(card => {
+
+        const nombre = card.querySelector("h3").textContent.toLowerCase();
+        const grupo = card.closest(".categoria").dataset.cat;
+
+        const matchTexto = nombre.includes(texto);
+        const matchCat = (cat === "all" || grupo === cat);
+
+        if (matchTexto && matchCat) {
+            card.style.display = "flex";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+}
+
+buscador.addEventListener("input", filtrar);
+categoria.addEventListener("change", filtrar);
+</script>
+    
 </body>
 </html>
