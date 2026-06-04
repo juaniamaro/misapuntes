@@ -1,55 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Apuntes</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mis Apuntes</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <h1 id="title"></h1>
-    </header>
+<header class="terminal-header">
+    <h1 id="titulo"></h1>
+</header>
 
-    <nav>
-        <a href="#">Lenguajes de Programación</a>
-        <a href="#">Diseño Web</a>
-        <a href="#">IA</a>
-        <a href="#">Ciberseguridad</a>
-    </nav>
+<nav>
+    <a href="#">Diseño Web</a>
+    <a href="#">IA</a>
+    <a href="#">Ciberseguridad</a>
+    <a href="#">Lenguajes de Programación</a>
+</nav>
 
-    <main>
-        <div class="card">
-            <h2>Bienvenido</h2>
-            <p>
-                Aquí podrás organizar todos tus apuntes de Diseño Web,
-                Inteligencia Artificial, Ciberseguridad y Lenguajes de Programación.
-            </p>
-        </div>
-    </main>
+<main>
+    <div class="card">
+        <h2>Bienvenido</h2>
+        <p>
+            Aquí podrás guardar y organizar tus apuntes de programación,
+            inteligencia artificial y ciberseguridad.
+        </p>
+    </div>
+</main>
+
 <script>
 const texto = "REPO";
 
 let i = 0;
 let borrando = false;
 
-function efectoTypewriter() {
-    const titulo = document.getElementById("title");
+function efectoTerminal() {
+    const titulo = document.getElementById("titulo");
 
     if (!borrando) {
-        // ESCRIBIR
         titulo.textContent = texto.substring(0, i);
         i++;
 
         if (i > texto.length) {
             borrando = true;
-            setTimeout(efectoTypewriter, 1200); // pausa cuando termina de escribir
+            setTimeout(efectoTerminal, 1500);
             return;
         }
 
     } else {
-        // BORRAR
         titulo.textContent = texto.substring(0, i);
         i--;
 
@@ -59,10 +59,11 @@ function efectoTypewriter() {
         }
     }
 
-    setTimeout(efectoTypewriter, borrando ? 60 : 120);
+    setTimeout(efectoTerminal, borrando ? 50 : 90);
 }
 
-efectoTypewriter();
+efectoTerminal();
 </script>
+
 </body>
 </html>
