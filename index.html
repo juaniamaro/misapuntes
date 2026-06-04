@@ -29,19 +29,39 @@
         </div>
     </main>
 <script>
-
 const texto = "REPO";
 let i = 0;
+let borrando = false;
 
-function escribir() {
-    if (i < texto.length) {
-        document.getElementById("title").textContent += texto.charAt(i);
+function efectoTypewriter() {
+    const titulo = document.getElementById("title");
+
+    if (!borrando) {
+        // ESCRIBIENDO
+        titulo.textContent = texto.substring(0, i);
         i++;
-        setTimeout(escribir, 120); // velocidad de escritura
+
+        if (i > texto.length) {
+            borrando = true;
+            setTimeout(efectoTypewriter, 1200); // pausa antes de borrar
+            return;
+        }
+
+    } else {
+        // BORRANDO
+        titulo.textContent = texto.substring(0, i);
+        i--;
+
+        if (i < 0) {
+            borrando = false;
+            i = 0;
+        }
     }
+
+    setTimeout(efectoTypewriter, borrado ? 60 : 120);
 }
 
-escribir();
+efectoTypewriter();
 </script>
 </body>
 </html>
