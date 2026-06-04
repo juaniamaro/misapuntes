@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desarrollo web</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🔥 HEADER ORIGINAL -->
+<header class="terminal-header">
+    <h1 id="titulo"></h1>
+</header>
+
+<!-- 🔥 MENÚ ORIGINAL -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="webmain.html">Desarrollo Web</a>
+    <a href="iamain.html">IA</a>
+    <a href="ciberseguridadmain.html">Ciberseguridad</a>
+    <a href="lenguajesmain.html">Lenguajes de Programación</a>
+</nav>
+<div class="filter-wrapper">
+
+    <div class="filter-box">
+
+        <!-- 🔍 BUSCADOR -->
+        <span class="icon">🔍</span>
+        <input type="text" id="buscador" placeholder="Buscar lenguaje...">
+
+        <!-- 🔽 SELECT CATEGORÍAS -->
+        <select id="categoria">
+            <option value="all">Todas las categorías</option>
+            <option value="web">Desarrollo Web</option>
+            <option value="backend">Backend</option>
+        </select>
+
+    </div>
+
+</div>
+    <!-- 💻 DESARROLLO WEB -->
+    <section class="categoria" data-cat="web">
+
+        <h2 class="cat-title">💻 Desarrollo Web</h2>
+
+        <div class="grid">
+
+            <div class="lang-card">
+                <div class="icon">🌐</div>
+                <h3>HTML</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🎨</div>
+                <h3>CSS</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">⚡</div>
+                <h3>JavaScript</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🟦</div>
+                <h3>TypeScript</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ⚙️ BACKEND -->
+    <section class="categoria" data-cat="backend">
+        <h2 class="cat-title">⚙️ Backend</h2>
+
+        <div class="grid">
+
+            <div class="lang-card">
+                <div class="icon">🐘</div>
+                <h3>PHP</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🐍</div>
+                <h3>Python</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">🟢</div>
+                <h3>Node.js</h3>
+            </div>
+
+            <div class="lang-card">
+                <div class="icon">💎</div>
+                <h3>Ruby</h3>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+    <script>
+const texto = "Desarrollo Web";
+
+let i = 0;
+let borrando = false;
+
+function efectoTerminal() {
+    const titulo = document.getElementById("titulo");
+
+    if (!borrando) {
+        titulo.textContent = texto.substring(0, i);
+        i++;
+
+        if (i > texto.length) {
+            borrando = true;
+            setTimeout(efectoTerminal, 1500);
+            return;
+        }
+
+    } else {
+        titulo.textContent = texto.substring(0, i);
+        i--;
+
+        if (i < 0) {
+            borrando = false;
+            i = 0;
+        }
+    }
+
+    setTimeout(efectoTerminal, borrando ? 50 : 90);
+}
+
+efectoTerminal();
+</script>
+<script>
+const buscador = document.getElementById("buscador");
+const categoria = document.getElementById("categoria");
+
+const categorias = document.querySelectorAll(".categoria");
+
+function filtrar() {
+
+    const texto = buscador.value.toLowerCase();
+    const cat = categoria.value;
+
+    categorias.forEach(section => {
+
+        const sectionCat = section.dataset.cat;
+        const titulo = section.querySelector(".cat-title");
+        const cards = section.querySelectorAll(".lang-card");
+
+        let algunaVisible = false;
+
+        cards.forEach(card => {
+
+            const nombre = card.querySelector("h3").textContent.toLowerCase();
+
+            const matchTexto = nombre.includes(texto);
+            const matchCat = (cat === "all" || cat === sectionCat);
+
+            if (matchTexto && matchCat) {
+                card.style.display = "flex";
+                algunaVisible = true;
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+        // 🧠 CONTROL DE VISIBILIDAD DEL TÍTULO
+        const filtroActivo = (cat !== "all" || texto.trim() !== "");
+
+        if (!filtroActivo) {
+            // SIN FILTRO → todo visible
+            section.style.display = "block";
+            titulo.style.display = "block";
+        } 
+        else if (algunaVisible) {
+            // HAY RESULTADOS → mostrar título
+            section.style.display = "block";
+            titulo.style.display = "block";
+        } 
+        else {
+            // NO HAY RESULTADOS → ocultar sección completa
+            section.style.display = "none";
+        }
+
+    });
+}
+
+buscador.addEventListener("input", filtrar);
+categoria.addEventListener("change", filtrar);
+</script>
+    
+</body>
+</html>
