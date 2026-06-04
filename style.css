@@ -202,6 +202,11 @@ main {
     flex-direction: column;  /* 🔥 clave para texto seguido */
     align-items: center;     /* centra el bloque */
 }
+.centro h1,
+.centro p {
+    width: 100%;
+    max-width: 750px;
+}
 
 .centro h1 {
     color: #00ff88;
