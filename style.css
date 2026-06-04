@@ -298,3 +298,51 @@ main {
     box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
 }
 
+/* CENTRAR EN PANTALLA */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* CAJA BUSCADOR */
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #72f2c0; /* menta */
+    padding: 8px 10px;
+    width: 320px;
+    transition: 0.3s;
+}
+
+/* ICONO */
+.search-box .icon {
+    color: #72f2c0;
+    font-size: 1.2rem;
+}
+
+/* INPUT */
+#buscador {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* PLACEHOLDER */
+#buscador::placeholder {
+    color: #555;
+}
+
+/* EFECTO AL ESCRIBIR / FOCUS */
+.search-box:focus-within {
+    border-bottom: 2px solid #ff4fa3; /* rosa */
+}
+
+.search-box:focus-within .icon {
+    color: #ff4fa3;
+}
