@@ -27,6 +27,20 @@ header h1 {
     font-weight: bold;
 }
 
+/* Cursor parpadeante */
+#title::after {
+    content: "|";
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+    color: black;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
 /* Menú */
 nav {
     display: flex;
