@@ -83,5 +83,39 @@ buscador.addEventListener("input", function () {
     });
 });
 </script>
+    <script>
+const texto = "Lenguajes de Programación";
+
+let i = 0;
+let borrando = false;
+
+function efectoTerminal() {
+    const titulo = document.getElementById("titulo");
+
+    if (!borrando) {
+        titulo.textContent = texto.substring(0, i);
+        i++;
+
+        if (i > texto.length) {
+            borrando = true;
+            setTimeout(efectoTerminal, 1500);
+            return;
+        }
+
+    } else {
+        titulo.textContent = texto.substring(0, i);
+        i--;
+
+        if (i < 0) {
+            borrando = false;
+            i = 0;
+        }
+    }
+
+    setTimeout(efectoTerminal, borrando ? 50 : 90);
+}
+
+efectoTerminal();
+</script>
 </body>
 </html>
