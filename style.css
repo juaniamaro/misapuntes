@@ -259,6 +259,7 @@ main {
 /* ========================= */
 
 .grid {
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 🔥 3 columnas fijas */
     gap: 20px;
