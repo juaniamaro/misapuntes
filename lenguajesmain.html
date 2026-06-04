@@ -1,95 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Lenguajes de Programación</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5f7fa;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      padding: 40px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 15px;
-      padding: 20px;
-      text-align: center;
-      text-decoration: none;
-      color: black;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .icon {
-      font-size: 50px;
-      margin-bottom: 10px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lenguajes de Programación</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <h1>Lenguajes de Programación</h1>
-  <p>Haz clic en un lenguaje para ver sus apuntes</p>
+<!-- 🔥 HEADER ORIGINAL -->
+<header class="terminal-header">
+    <h1 id="titulo"></h1>
 </header>
 
-<div class="container">
+<!-- 🔥 MENÚ ORIGINAL -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="#">Diseño Web</a>
+    <a href="#">IA</a>
+    <a href="#">Ciberseguridad</a>
+    <a href="lenguajes.html">Lenguajes de Programación</a>
+</nav>
 
-  <a class="card" href="python.html">
-    <div class="icon">🐍</div>
-    Python
-  </a>
+<!-- 🧠 CONTENIDO PRINCIPAL -->
+<main class="lenguajes-grid">
 
-  <a class="card" href="javascript.html">
-    <div class="icon">⚡</div>
-    JavaScript
-  </a>
+    <a href="#" class="lang-card">
+        <div class="icon">🐍</div>
+        <h3>Python</h3>
+    </a>
 
-  <a class="card" href="html.html">
-    <div class="icon">🌐</div>
-    HTML</a>
+    <a href="#" class="lang-card">
+        <div class="icon">🌐</div>
+        <h3>JavaScript</h3>
+    </a>
 
-  <a class="card" href="css.html">
-    <div class="icon">🎨</div>
-    CSS
-  </a>
+    <a href="#" class="lang-card">
+        <div class="icon">☕</div>
+        <h3>Java</h3>
+    </a>
 
-  <a class="card" href="java.html">
-    <div class="icon">☕</div>
-    Java
-  </a>
+    <a href="#" class="lang-card">
+        <div class="icon">⚙️</div>
+        <h3>C / C++</h3>
+    </a>
 
-  <a class="card" href="csharp.html">
-    <div class="icon">🎮</div>
-    C#
-  </a>
+    <a href="#" class="lang-card">
+        <div class="icon">🧠</div>
+        <h3>Go</h3>
+    </a>
 
-</div>
+    <a href="#" class="lang-card">
+        <div class="icon">💠</div>
+        <h3>C#</h3>
+    </a>
+
+</main>
 
 </body>
 </html>
