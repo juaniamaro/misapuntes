@@ -193,23 +193,18 @@ main {
 /* ========================= */
 /* 🧠 CENTRO */
 /* ========================= */
-.centro {
-    flex: 1;
-    background-color: #0d0d0d;
-    padding: 60px;
-    color: white;
-}
-
 .centro h1 {
     color: #00ff88;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    font-size: 2rem;
 }
 
 .centro p {
     color: #ccc;
-    line-height: 1.7;
+    line-height: 1.8;
+    font-size: 1.1rem;
     margin-bottom: 20px;
-    font-size: 1.05rem;
+    max-width: 800px;
 }
 
 /* ========================= */
