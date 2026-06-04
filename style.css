@@ -7,11 +7,15 @@
 
 /* Estilos generales */
 body {
-    background-color: #0d0d0d;
-    color: white;
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
+    background-color: #000;
+    color: #00ff88;
+    font-family: "Courier New", monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
+
 
 /* Cabecera */
 header {
@@ -21,19 +25,17 @@ header {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
 
-header h1 {
-    color: #000;
-    font-size: 3rem;
-    font-weight: bold;
+/* Texto grande estilo consola */
+h1 {
+    font-size: 2rem;
+    text-shadow: 0 0 8px #00ff88;
 }
 
 /* Cursor parpadeante */
-#title::after {
-    content: "|";
-    margin-left: 5px;
+h1::after {
+    content: "_";
     animation: blink 0.7s infinite;
-    color: black;
-    font-weight: bold;
+    margin-left: 5px;
 }
 
 @keyframes blink {
