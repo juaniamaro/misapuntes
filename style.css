@@ -413,6 +413,9 @@ main {
         transform: rotate(360deg);
     }
 }
+.proximamente{
+    width: 50%;
+}
 /*BASES RECOMENDADAS*/
 .bases {
     max-width: 1200px;
