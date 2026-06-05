@@ -1098,3 +1098,49 @@ main {
     line-height: 1.8;
     font-size: 1.05rem;
 }
+
+.interesante {
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.interesante-box {
+    background: #ffd7a3; /* naranja clarito */
+    border: 2px solid #ff9f43;
+    border-radius: 15px;
+
+    padding: 30px;
+    max-width: 700px;
+    text-align: center;
+
+    color: #2b2b2b;
+}
+
+.interesante-box h2 {
+    margin-bottom: 15px;
+    color: #ff7a00;
+    font-size: 1.4rem;
+}
+
+.interesante-box p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* BOTÓN */
+.btn-terminales {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #ff7a00;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.btn-terminales:hover {
+    background: #ff4fa3;
+    transform: translateY(-3px);
+}
