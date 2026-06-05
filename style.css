@@ -951,7 +951,7 @@ main {
 }
 /* CSS MAIN PYTHON*/
 /* ========================= */
-/* 🧠 NIVELES */
+/* 🧠 NIVELES (CARDS COLORES SUAVES)
 /* ========================= */
 
 .niveles {
@@ -965,26 +965,65 @@ main {
 
 /* CARD BASE */
 .nivel-card {
-    background: #111;
-    border: 2px solid #72f2c0;
     border-radius: 15px;
     padding: 25px;
     text-align: center;
+    border: 2px solid transparent;
+    transition: 0.3s;
 }
 
-.nivel-card h3 {
-    margin-bottom: 10px;
+/* ========================= */
+/* 🟢 BÁSICO (verde suave)
+/* ========================= */
+
+.nivel-card.basico {
+    background: rgba(0, 255, 136, 0.08);
+    border-color: rgba(0, 255, 136, 0.4);
 }
+
+.nivel-card.basico h3 {
+    color: #7dffb2;
+}
+
+/* ========================= */
+/* 🟠 INTERMEDIO (naranja suave)
+/* ========================= */
+
+.nivel-card.intermedio {
+    background: rgba(255, 165, 0, 0.08);
+    border-color: rgba(255, 165, 0, 0.4);
+}
+
+.nivel-card.intermedio h3 {
+    color: #ffb86b;
+}
+
+/* ========================= */
+/* 🔴 AVANZADO (rojo suave)
+/* ========================= */
+
+.nivel-card.avanzado {
+    background: rgba(255, 79, 163, 0.08);
+    border-color: rgba(255, 60, 60, 0.4);
+}
+
+.nivel-card.avanzado h3 {
+    color: #ff7a7a;
+}
+
+/* ========================= */
+/* TEXTO GENERAL */
+/* ========================= */
 
 .nivel-card p {
     color: #ccc;
     margin-bottom: 20px;
 }
 
-/* COLORES POR NIVEL */
-.basico h3 { color: #00ff88; }
-.intermedio h3 { color: #ffcc00; }
-.avanzado h3 { color: #ff4fa3; }
+.nivel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.08);
+}
 
 /* ========================= */
 /* 📦 LECCIONES */
