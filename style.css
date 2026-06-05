@@ -17,7 +17,10 @@ body {
     display: flex;
     min-height: 100vh;
 }
-
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* ========================= */
 /* 🔥 HEADER TIPO TERMINAL   */
 /* ========================= */
