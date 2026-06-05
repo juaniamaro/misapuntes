@@ -105,6 +105,18 @@ function efectoTerminal() {
 
 efectoTerminal();
 </script>
+ <script>
+function copiarCodigo(btn) {
+    const code = btn.nextElementSibling.querySelector("code").innerText;
+
+    navigator.clipboard.writeText(code);
+
+    btn.textContent = "¡Copiado!";
+    setTimeout(() => {
+        btn.textContent = "Copiar";
+    }, 1500);
+}
+</script>
 </div>    
 </body>
 </html>
