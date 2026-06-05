@@ -1189,3 +1189,51 @@ main {
     background: #72f2c0;
     color: black;
 }
+/* botones instalación python en linux y windows*/
+.botones-instalacion {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+/* BOTÓN LINUX (verde agua) */
+.btn-linux {
+    background: #111;
+    border: 2px solid #72f2c0;
+    color: #72f2c0;
+
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-linux:hover {
+    background: #72f2c0;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+/* BOTÓN WINDOWS (rosa) */
+.btn-windows {
+    background: #111;
+    border: 2px solid #ff4fa3;
+    color: #ff4fa3;
+
+    padding: 12px 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn-windows:hover {
+    background: #ff4fa3;
+    color: #000;
+    transform: translateY(-3px);
+}
