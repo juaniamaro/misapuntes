@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PYTHON</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+<div class="wrapper">
+<!-- 🔥 HEADER ORIGINAL -->
+<header class="terminal-header">
+    <h1 id="titulo"></h1>
+</header>
+
+<!-- 🔥 MENÚ ORIGINAL -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="webmain.html">Desarrollo Web</a>
+    <a href="iamain.html">IA</a>
+    <a href="ciberseguridadmain.html">Ciberseguridad</a>
+    <a href="lenguajesmain.html">Lenguajes de Programación</a>
+</nav>
+    
+    <script>
+const texto = "Lenguajes de Programación";
+
+let i = 0;
+let borrando = false;
+
+function efectoTerminal() {
+    const titulo = document.getElementById("titulo");
+
+    if (!borrando) {
+        titulo.textContent = texto.substring(0, i);
+        i++;
+
+        if (i > texto.length) {
+            borrando = true;
+            setTimeout(efectoTerminal, 1500);
+            return;
+        }
+
+    } else {
+        titulo.textContent = texto.substring(0, i);
+        i--;
+
+        if (i < 0) {
+            borrando = false;
+            i = 0;
+        }
+    }
+
+    setTimeout(efectoTerminal, borrando ? 50 : 90);
+}
+
+efectoTerminal();
+</script>
+</div>
+</body>
+</html>
