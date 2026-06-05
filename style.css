@@ -411,3 +411,53 @@ main {
         transform: rotate(360deg);
     }
 }
+/*BASES RECOMENDADAS*/
+.bases {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.bases-title {
+    color: #ff4fa3;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.nivel {
+    margin-bottom: 50px;
+}
+
+.nivel h3 {
+    color: #72f2c0;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.bases-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.base-card {
+    background: #111;
+    border: 2px solid #72f2c0;
+    color: #fff;
+    text-decoration: none;
+
+    padding: 15px 25px;
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.base-card:hover {
+    border-color: #ff4fa3;
+    color: #ff4fa3;
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
+}
