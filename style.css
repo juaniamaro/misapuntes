@@ -14,11 +14,7 @@ body {
     justify-content: center;
     color: #fff;
 }
-.container {
-    width: 100%;
-    max-width: 1200px; 
-    min-height: 100vh;
-}
+
 .layout {
     display: flex;
     min-height: 100vh;
