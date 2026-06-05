@@ -1138,6 +1138,7 @@ main {
     border-radius: 10px;
     transition: 0.3s;
     font-weight: bold;
+    opacity: 50%;
 }
 
 .btn-terminales:hover {
