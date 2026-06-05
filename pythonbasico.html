@@ -1,1 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Básico</title>
+<link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+<div class="wrapper">
+<!-- 🔥 HEADER ORIGINAL -->
+<header class="terminal-header">
+    <h1 id="titulo"></h1>
+</header>
+
+<!-- 🔥 MENÚ ORIGINAL -->
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="webmain.html">Desarrollo Web</a>
+    <a href="iamain.html">IA</a>
+    <a href="ciberseguridadmain.html">Ciberseguridad</a>
+    <a href="lenguajesmain.html">Lenguajes de Programación</a>
+</nav>
+<div class="proximamente">
+    <div class="iconorueda">⚙️</div>
+    <h2>Próximamente...</h2>
+    <p>
+        Estoy trabajando en esta sección para añadir apuntes, recursos y contenido sobre ciberseguridad.
+        Muy pronto encontrarás guías, conceptos fundamentales, herramientas y mucho más.
+    </p>
+</div>
+<section class="bases">
+    <h2 class="bases-title">
+        Es importante que tengas conocimientos en...
+    </h2>
+
+    <!-- NIVEL BÁSICO -->
+    <div class="nivel">
+        <h3>🟢 Nivel básico</h3>
+
+        <div class="bases-grid">
+
+            <a href="#" class="base-card">🐧 Linux</a>
+            <a href="#" class="base-card">🌐 Redes</a>
+            <a href="#" class="base-card">🐍 Python</a>
+            <a href="#" class="base-card">📂 Git y GitHub</a>
+
+        </div>
+    </div>
+
+    <!-- NIVEL INTERMEDIO -->
+    <div class="nivel">
+        <h3>🟡 Nivel intermedio</h3>
+
+        <div class="bases-grid">
+
+            <a href="#" class="base-card">⚡ Bash</a>
+            <a href="#" class="base-card">🗄️ SQL</a>
+            <a href="#" class="base-card">🟨 JavaScript</a>
+            <a href="#" class="base-card">🦈 Wireshark</a>
+            <a href="#" class="base-card">🔍 Nmap</a>
+
+        </div>
+    </div>
+
+    <!-- NIVEL AVANZADO -->
+    <div class="nivel">
+        <h3>🔴 Nivel avanzado</h3>
+
+        <div class="bases-grid">
+
+            <a href="#" class="base-card">💻 C</a>
+            <a href="#" class="base-card">⚙️ C++</a>
+            <a href="#" class="base-card">🔬 Ingeniería Inversa</a>
+            <a href="#" class="base-card">🦠 Malware</a>
+            <a href="#" class="base-card">🕵️ Forense Digital</a>
+            <a href="#" class="base-card">🦀 Rust</a>
+
+        </div>
+    </div>
+
+</section>    
+  <script>
+const texto = "Python Básico";
+
+let i = 0;
+let borrando = false;
+
+function efectoTerminal() {
+    const titulo = document.getElementById("titulo");
+
+    if (!borrando) {
+        titulo.textContent = texto.substring(0, i);
+        i++;
+
+        if (i > texto.length) {
+            borrando = true;
+            setTimeout(efectoTerminal, 1500);
+            return;
+        }
+
+    } else {
+        titulo.textContent = texto.substring(0, i);
+        i--;
+
+        if (i < 0) {
+            borrando = false;
+            i = 0;
+        }
+    }
+
+    setTimeout(efectoTerminal, borrando ? 50 : 90);
+}
+
+efectoTerminal();
+</script>
+</div>    
+</body>
+</html>
