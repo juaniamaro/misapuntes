@@ -1074,3 +1074,27 @@ main {
 .serpiente{
         font-size: 80px;
 }
+
+/* CSS PYTHO BASICO*/
+
+.python-info {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.python-title {
+    color: #72f2c0; /* verde agua */
+    font-size: 2rem;
+    margin-bottom: 25px;
+    display: inline-block;
+    border-bottom: 3px solid #ff4fa3; /* subrayado rosa */
+    padding-bottom: 5px;
+}
+
+.python-info p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
