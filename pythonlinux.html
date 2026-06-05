@@ -87,11 +87,11 @@ sudo apt update
 sudo apt install python3
     </code></pre>
 </div>
+  <img src="4158cf46ad3b44b99069a6413db65fa4.png" alt="linuxinstaladopython" width="600">
   <p>
             A continuación cuando finalice el proceso pasaremos a comprar que se ha instalado de forma correcta mediante la siguiente orden:
         </p>
 <div class="code-box">
-    
     <button class="copy-btn" onclick="copiarCodigo(this)">
         Copiar
     </button>
@@ -99,8 +99,38 @@ sudo apt install python3
 python3 --version
     </code></pre>
 </div>    
-<img src="4158cf46ad3b44b99069a6413db65fa4.png" alt="linuxinstaladopython" width="300">
+<img src="4158cf46ad3b44b99069a6413db65fa4.png" alt="linuxinstaladopython" width="600">
 </section>
+<section class="python-info">
+
+    <h2 class="python-title">Paso 3: Instalar gestor de paquetes de Python</h2>
+    <p>
+            El gestor de paquetes de Python (pip) sirve para instalar y administrar librerías externas que no vienen incluidas en Python por defecto. Introduciremos lo siguiente en la terminal:   
+    </p>
+    <div class="code-box">
+    
+    <button class="copy-btn" onclick="copiarCodigo(this)">
+        Copiar
+    </button>
+    <pre><code id="codigo1">
+sudo apt install python3-pip
+    </code></pre>
+</div>
+  <img src="4158cf46ad3b44b99069a6413db65fa4.png" alt="linuxinstaladopython" width="600">
+  <p>
+            Comprobaremos que la instalación es correcta:
+        </p>
+<div class="code-box">
+    <button class="copy-btn" onclick="copiarCodigo(this)">
+        Copiar
+    </button>
+    <pre><code id="codigo1">
+pip3 --version
+    </code></pre>
+</div>    
+<img src="4158cf46ad3b44b99069a6413db65fa4.png" alt="linuxinstaladopython" width="600">
+</section>
+
 <nav><a href="pythonbasico.html">Volver a los apuntes de python básico</a>  </nav>
   
     <script>
@@ -133,8 +163,7 @@ function efectoTerminal() {
     }
 
     setTimeout(efectoTerminal, borrando ? 50 : 90);
-}
-
+}        
 efectoTerminal();
 </script>
  <script>
