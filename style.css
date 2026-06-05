@@ -18,7 +18,481 @@ body {
     min-height: 100vh;
 }
 .wrapper {
-    max-width: 200px;
+    max-width: * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+}
+
+/* FONDO GENERAL */
+body {
+   margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+}
+/* ========================= */
+/* 🔥 HEADER TIPO TERMINAL   */
+/* ========================= */
+
+.terminal-header {
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+}
+
+#titulo {
+    color: #ff4fa3;
+    font-size: 1.8rem;
+}
+
+/* cursor */
+#titulo::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+    margin-left: 5px;
+    color: #ff4fa3;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* ========================= */
+/* 🎨 MENÚ                  */
+/* ========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color:#72f2c0;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ff4fa3; /* rosa */
+    transform: translateY(-3px);
+}
+
+/* ========================= */
+/* 📦 CONTENIDO PRINCIPAL   */
+/* ========================= */
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 2px solid #72f2c0;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    text-align: center;
+}
+
+.card h2 {
+    color: #ff4fa3;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* ===== LAYOUT 3 COLUMNAS ===== */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* 🪟 VENTANA WINDOWS XP PERFIL */
+/* ========================= */
+
+.ventana-win {
+    width: 280px;
+    background-color: #c0c0c0;
+    border: 2px solid #808080;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    font-family: "Tahoma", sans-serif;
+}
+
+/* Barra superior estilo Windows */
+.barra-titulo {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    padding: 5px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+/* Botones ventana */
+.botones span {
+    margin-left: 5px;
+    background-color: #c0c0c0;
+    color: black;
+    padding: 0 5px;
+    border: 1px solid #808080;
+    font-size: 0.7rem;
+}
+
+/* Contenido de la ventana */
+.contenido-ventana {
+    padding: 15px;
+    text-align: center;
+}
+
+/* Foto perfil */
+.contenido-ventana img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border: 2px inset #808080;
+    margin: 10px 0;
+    background: white;
+}
+
+/* Texto */
+.contenido-ventana h2 {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.contenido-ventana .rol {
+    color: #000080;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.contenido-ventana .bio {
+    font-size: 0.8rem;
+    color: #222;
+    line-height: 1.3;
+}
+
+/* Idiomas */
+.idiomas {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.idiomas img {
+    width: 28px;
+    height: 18px;
+    border: 1px solid #808080;
+}
+
+/* ========================= */
+/* 🧠 CENTRO */
+/* ========================= */
+.centro {
+    flex: 1;
+    padding: 60px;
+    background-color: #000;
+
+    display: flex;
+    flex-direction: column;  /* 🔥 clave para texto seguido */
+    align-items: center;     /* centra el bloque */
+}
+.centro h1,
+.centro p {
+    width: 100%;
+    max-width: 750px;
+}
+
+.centro h1 {
+    color: #00ff88;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.centro p {
+    color: #ccc;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+/* ========================= */
+/* 📂 MENÚ DERECHO */
+/* ========================= */
+.menu-derecha {
+    width: 220px;
+    background-color: #111;
+    padding: 20px;
+}
+
+.menu-derecha h3 {
+    color: #ff4fa3;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.icono {
+    background-color: #1a1a1a;
+    border: 1px solid #72f2c0;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.icono:hover {
+    background-color: #ff4fa3;
+    border-color: #ff4fa3;
+    transform: translateX(5px);
+}
+/* ========================= */
+/* 🧠 LENGUAJES GRID */
+/* ========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    justify-items: center;
+}
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* tarjeta */
+.lang-card {
+    background-color: #111;
+    border: 2px solid #72f2c0;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 20px;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* icono */
+.lang-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* texto */
+.lang-card h3 {
+    color: #ff4fa3;
+    font-size: 1.1rem;
+}
+.lang-card {
+    width: 100%;
+    max-width: 220px;
+}
+/* hover */
+.lang-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff4fa3;
+    box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
+}
+
+/* CENTRAR EN PANTALLA */
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+/* CONTENEDOR */
+.filter-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+/* BARRA COMBINADA */
+.filter-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    width: 500px;
+    padding: 8px 12px;
+
+    border-bottom: 2px solid #72f2c0;
+    transition: 0.3s;
+}
+
+/* ICONO */
+.filter-box .icon {
+    color: #72f2c0;
+}
+
+/* INPUT */
+#buscador {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+/* SELECT */
+#categoria {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+/* OPCIONES */
+#categoria option {
+    background: #111;
+    color: white;
+}
+
+/* FOCUS EFFECT */
+.filter-box:focus-within {
+    border-bottom: 2px solid #ff4fa3;
+}
+
+.filter-box:focus-within .icon {
+    color: #ff4fa3;
+}
+.categoria {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 🔥 centra todo */
+}
+
+.cat-title {
+    display: inline-flex;   /* 🔥 clave */
+    justify-content: center;
+    align-items: center;
+
+    color: #72f2c0;
+    margin: 40px 0 20px;
+    padding: 8px 18px;
+
+    border-bottom: 2px solid #ff4fa3;
+
+    width: fit-content; /* 🔥 evita expansión */
+}
+/* CIBERSEGURIDAD*/
+/* CSS PROXIMAMENTE*/
+.iconorueda {
+    font-size: 80px;
+    display: inline-block;
+    animation: girar 3s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.proximamente {
+    max-width: 700px;
+    margin: 80px auto;
+    text-align: center;
+
+    padding: 30px;
+    border: 1px solid #72f2c0;
+    border-radius: 12px;
+    background: #111;
+}
+/*BASES RECOMENDADAS*/
+.bases {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.bases-title {
+    color: #ff4fa3;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+.nivel {
+    margin-bottom: 50px;
+}
+
+.nivel h3 {
+    color: #72f2c0;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.bases-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.base-card {
+    background: #111;
+    border: 2px solid #72f2c0;
+    color: #fff;
+    text-decoration: none;
+
+    padding: 15px 25px;
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.base-card:hover {
+    border-color: #ff4fa3;
+    color: #ff4fa3;
+    transform: translateY(-4px);
+
+    box-shadow: 0 0 15px rgba(255, 79, 163, 0.3);
+}px;
     margin: 0 auto;
 }
 /* ========================= */
