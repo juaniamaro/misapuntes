@@ -1237,3 +1237,28 @@ main {
     color: #000;
     transform: translateY(-3px);
 }
+
+.resumen {
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f4f8ff;
+    border-left: 6px solid #3776ab;
+    font-family: Arial, sans-serif;
+}
+
+.resumen h2 {
+    color: #3776ab;
+}
+
+.resumen ul {
+    margin-left: 20px;
+}
+
+.resumen blockquote {
+    margin-top: 15px;
+    padding: 10px;
+    background: white;
+    border-left: 4px solid #3776ab;
+    font-weight: bold;
+}
