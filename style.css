@@ -1239,23 +1239,26 @@ main {
 }
 
 .holamundo {
-    background: #ffffff;
-    border: 1px solid #e6e6e6;
-    border-left: 6px solid #4a90e2;
+    background: #121212; /* fondo oscuro */
+    border: 1px solid #2a2a2a;
+    border-left: 6px solid #2dd4bf; /* verde agua */
     border-radius: 12px;
     padding: 20px 22px;
     margin: 20px 0;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #e5e5e5;
 }
 
+/* párrafos */
 .holamundo p {
     margin: 10px 0;
     font-size: 15.5px;
+    color: #d6d6d6;
 }
 
+/* listas */
 .holamundo ul {
     margin: 10px 0 10px 20px;
     padding: 0;
@@ -1265,27 +1268,42 @@ main {
     margin: 6px 0;
 }
 
+/* sublistas */
 .holamundo ul ul {
     margin-top: 6px;
     margin-left: 18px;
 }
 
+/* código */
 .holamundo code {
-    background: #f4f6f8;
+    background: #1f1f1f;
     padding: 2px 6px;
     border-radius: 6px;
     font-size: 14px;
-    color: #d63384;
+    color: #ff4d8d; /* rosa */
+    border: 1px solid #2dd4bf; /* verde agua */
 }
 
+/* bloque destacado */
 .holamundo blockquote {
     margin: 15px 0 0 0;
     padding: 12px 15px;
-    background: #f0f7ff;
-    border-left: 4px solid #4a90e2;
+    background: #1a1a1a;
+    border-left: 4px solid #ff4d8d; /* rosa */
     border-radius: 8px;
     font-style: italic;
-    color: #1f3b57;
+    color: #eaeaea;
+}
+
+/* títulos dentro del bloque (por si usas h3) */
+.holamundo h3 {
+    color: #2dd4bf; /* verde agua */
+    margin-top: 18px;
+    font-size: 18px;
+}
+
+.holamundo strong {
+    color: #ffffff;
 }
 h3 {
     font-size: 18px;
