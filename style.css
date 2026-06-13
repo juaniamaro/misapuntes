@@ -1238,18 +1238,6 @@ main {
     transform: translateY(-3px);
 }
 
-.holamundo {
-    background: #121212; /* fondo oscuro */
-    border: 1px solid #2a2a2a;
-    border-left: 6px solid #2dd4bf; /* verde agua */
-    border-radius: 12px;
-    padding: 20px 22px;
-    margin: 20px 0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #e5e5e5;
-}
 
 /* párrafos */
 .holamundo p {
