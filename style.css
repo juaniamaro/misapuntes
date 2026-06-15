@@ -1297,6 +1297,7 @@ main {
 .holamundo strong {
     color: #ffffff;
 }
+
 h3 {
     font-size: 18px;
     color: #1b5e20;
@@ -1352,7 +1353,6 @@ h3 {
 
 .funcion-card h4{
     margin-bottom:15px;
-    color:white;
 }
 
 /* Texto */
