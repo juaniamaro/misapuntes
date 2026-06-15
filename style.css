@@ -1382,3 +1382,51 @@ h3 {
     padding:2px 6px;
     border-radius:6px;
 }
+ /*piramide ciberseguridad inicaicon*/
+.piramide{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:5px;
+}
+
+.nivel{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:60px;
+    font-weight:bold;
+    border-radius:6px;
+    box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+.nivel1{
+    width:180px;
+    background:#ef4444;
+}
+
+.nivel2{
+    width:260px;
+    background:#f97316;
+}
+
+.nivel3{
+    width:340px;
+    background:#eab308;
+    color:#111;
+}
+
+.nivel4{
+    width:420px;
+    background:#22c55e;
+}
+
+.nivel5{
+    width:500px;
+    background:#3b82f6;
+}
+
+.nivel6{
+    width:580px;
+    background:#8b5cf6;
+}
