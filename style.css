@@ -1254,6 +1254,10 @@ main {
 
 .holamundo ul li {
     margin: 6px 0;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  text-align: center;
 }
 
 /* sublistas */
